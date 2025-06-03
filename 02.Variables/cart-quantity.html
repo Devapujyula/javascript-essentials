@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <p>Cart Quantity</p>
+    <button onclick="console.log('Cart Quantity : ' ,cartQuantity)">
+      Show Quantity
+    </button>
+    <button
+      onclick="console.log('Cart Quantity', cartQuantity = cartQuantity + 1)"
+    >
+      Add to cart
+    </button>
+    <button
+      onclick="console.log('Cart Quntity', cartQuantity = cartQuantity + 2)"
+    >
+      +2
+    </button>
+    <button
+      onclick="console.log('Cart Quntity', cartQuantity = cartQuantity + 3)"
+    >
+      +3
+    </button>
+    <button onclick="console.log('Cart Quntity', cartQuantity = 0)">
+      Reset Cart
+    </button>
+
+    <button onclick="console.log('Cart Quntity', cartQuantity += 4)">+4</button>
+    <button onclick="console.log('Cart Quntity', cartQuantity += 5)">+5</button>
+
+    <button onclick="console.log('Cart Quntity', cartQuantity -= 1)">
+      Remove from cart
+    </button>
+    <button onclick="console.log('Cart Quntity', cartQuantity -= 2)">-2</button>
+    <button onclick="console.log('Cart Quntity', cartQuantity -= 3)">-3</button>
+
+    <script>
+      let cartQuantity = 0;
+    </script>
+  </body>
+</html>
