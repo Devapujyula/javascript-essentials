@@ -7,6 +7,10 @@
  */
 let a = 67;
 
+// a is identifier
+// 67 is literal
+// = is assignment operator
+
 console.log(a);
 
 a = "Prakash";
