@@ -10,6 +10,10 @@
  * Accessing values
  * let numbers = [1, 2, 3, 4, 5]
  * console.log(number[0]) // 1
+ *
+ * Symbol is a primitive data type introduced in ES6.
+ * It’s used to create unique identifiers.
+ * It's not iterable, not indexable, and not like an object or array.
  */
 
 // Accesing values
