@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Spread Operator</title>
+  </head>
+  <body>
+    <script>
+      // Spread Operator(...) -> It takes an iterable and expands or separate each element
+      var arr = [78, 87, 98];
+      console.log(arr);
+      console.log(...arr);
+
+      var arr2 = [1, 2, 3, 4, 5, 6, ...arr];
+      console.log(arr2);
+
+      var s1 = ["JavaScript", ...arr, ...arr2];
+      console.log(s1);
+
+      var s2 = "Prakash";
+      console.log(s2);
+      console.log(...s2);
+
+      function add(a, b, c, d) {
+        console.log(a + b + c + d);
+      }
+      add(...arr2);
+    </script>
+  </body>
+</html>
