@@ -33,7 +33,7 @@ var car3 = {
 
 // 2. Factory function
 // A factory function is any function that returns a new object for every function call
-// Function name should follow camelCase naming convention
+//! Function name should follow camelCase naming convention
 // Passing Object Properties
 function createCar(color, brand) {
   return {
