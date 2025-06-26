@@ -15,7 +15,7 @@
  * const Item = {
  * name : "LED Bulb ",
  * Price: "165"
- * above example name indicates key and price indicates value}
+ * above example name indicates key and led bulb indicates value}
  */
 
 let a = null;
