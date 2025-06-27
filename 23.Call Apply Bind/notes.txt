@@ -1,0 +1,16 @@
+Why call, apply, and bind?
+-They are methods available on all JavaScript functions. Their main use is to:
+-Explicitly set the value of this
+-Control function invocation
+-Borrow methods from other objects
+
+🔸 When to use what:
+-Use call when invoking a function immediately with custom this and separate arguments.
+-Use apply when arguments are already in an array.
+-Use bind when you want to save a function with a fixed this for later use.
+
+🔸 Why important in real apps?
+-Event handling (bind)
+-Callback context correction
+-React classes
+-Method reuse (borrowing methods)
