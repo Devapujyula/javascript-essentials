@@ -1,0 +1,8 @@
+🔹^ (Caret): Allows updates for minor and patch versions, but prevents major updates.
+👉 Example: “express”: “^4.21.2” will accept updates up to but not including version 5.0.0 (e.g., 4.22.0 but not 5.0.0).
+
+🔹 ~ (Tilde): Permits updates for patch versions only.
+👉 Example: “cors”: “~2.8.5” will accept updates up to but not including version 2.9.0 (e.g., 2.8.6 but not 2.9.0).
+
+💡 Why does this matter?
+Using ^ gives you flexibility while maintaining stability in your app. Meanwhile, using ~ ensures that your app won’t break due to minor version changes. Understanding this distinction helps in managing dependencies effectively.
