@@ -1,0 +1,5 @@
+| Keyword | Scope           | Can Reassign?   | Can Redeclare?  | Hoisted?                              | Use Case             |
+| ------- | --------------- | -------------   | --------------  | ------------------------------------  | -------------------- |
+| `var`   | Function-scoped | ✅ Yes         | ✅ Yes          | ✅ Yes (hoisted as undefined)        | Old JS, avoid it now |
+| `let`   | Block-scoped    | ✅ Yes         | ❌ No           | ✅ Yes (hoisted but not initialized) | Recommended          |
+| `const` | Block-scoped    | ❌ No          | ❌ No           | ✅ Yes (hoisted but not initialized) | Use for constants    |
