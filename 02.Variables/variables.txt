@@ -3,3 +3,31 @@
 | `var`   | Function-scoped | ✅ Yes         | ✅ Yes          | ✅ Yes (hoisted as undefined)        | Old JS, avoid it now |
 | `let`   | Block-scoped    | ✅ Yes         | ❌ No           | ✅ Yes (hoisted but not initialized) | Recommended          |
 | `const` | Block-scoped    | ❌ No          | ❌ No           | ✅ Yes (hoisted but not initialized) | Use for constants    |
+
+..............................................................................................................................................
+// JAVASCRIPT VARIABLES
+
+var x; // declaration
+x = 10; // assignment
+var x = 10; // initialization
+x = 20; // Shadowing means re-declaring the x only in var keyword
+
+// JS hoisting
+{
+    x = 30;
+    console.log("x=" ,x)
+    var x;
+}
+
+// let 
+// It is used to define block scope variable
+// Block scope is accesibale only in that block
+// let allows declaration, assignment, initialization
+// let can not allow shadowing and hoisting
+
+// const
+// It doesnot allow declaration, assignment
+// It will allow only initialization
+// It is not about changing it is about initialization
+// It will not allow shadowing and hoisting
+
