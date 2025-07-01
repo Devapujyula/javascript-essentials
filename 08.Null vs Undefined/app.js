@@ -8,6 +8,10 @@
 
 // Null - "developer sets the value"
 
+//* undefined is something that has been created (a variable), but has not yet been defined (given a value).
+
+//* Null is a value of nothing, whereas undefined is a variable that has not yet had a value set to it.
+
 let number1 = 20 + null;
 console.log(number1);
 
