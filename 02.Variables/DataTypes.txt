@@ -1,0 +1,115 @@
+// JAVASCRIPT DATA TYPES
+
+Premitive Data Types: These are immutable
+
+number:
+Signed
+Unsigned
+Float
+Double
+Decimal
+Exponent
+Binary
+Hexa
+Octa
+
+String:
+Single quote ''
+Double Quote ""
+back tick ``  ${}
+
+boolean:
+true
+false 
+
+null
+undefined
+
+Non Primitive Data Types: These are mutable
+
+array: reduce over head and complexity
+var products = []
+var array = new Array()
+array support destructuring
+
+methods used in JavaScript:
+
+toString()
+join()
+slice()
+
+for..in
+for..of
+map()  -> It is iterator in JavaScript we use Iterators in React we do not use loops 
+
+indexOf()
+lastIndexOf()
+
+push()
+unshift()
+
+pop()
+shift()
+splice()
+
+Sorting:
+sort()
+reverse()
+
+Searching:
+find()
+filter()
+
+object:
+SIMULA is 1st object oriented programming
+It is used to keep all related data and logic together
+var persons = {"name" : "Prakash", "age" : 26, "hobby":"Reading Mythology"}
+There are 2 forms of data XML and JSON now a days every one working on JSON 
+In JS we have both JSON and JS Functionalities
+If there is any logic it is not JSON 
+JSON donot have any logic
+
+map:
+It is key and value collection
+It provides implicit methods to manipulate 
+It provides implicit iterators
+It is fast
+It is not for structured data
+
+methods in maps:
+set()
+get()
+keys()
+values()
+entries()
+delete()
+has()
+clear()
+
+set:
+
+The major issue with the structured data in JavaScript is unique identification ---> internally used a concept called SYMBOL
+
+SYMBOL 
+It is primitive 
+It hidden from iterators 
+It is implicity used for iterators
+
+Date is defined by using Date()
+
+Syntax
+var mfd = new Date() // Current date and time
+var mfg = new Date("2025-05-24 15:28:23,87")
+
+acess the dates by methods:
+getHours()
+getMinutes()
+getSeconds()
+getMilliSeconds()
+getDate()
+getDay()
+getMonth()
+getFullYear()
+
+// above all are come by numbers only logic needed to display ny string or numbers formate
+
