@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Closure</title>
+  </head>
+  <body>
+    <center>
+      <h1><u>What is function scope and closure</u></h1>
+    </center>
+
+    <script>
+      console.log("Start");
+
+      // function scope example
+      // function greet() {
+      //   var message = "Hello";
+      //   console.log(message);
+      // }
+      // greet();
+      // console.log(message);
+
+      // Closure code example
+      // function outer() {
+      //   var value = "Hello from outer";
+      //   console.log("Outer function executed");
+
+      //   function inner() {
+      //     console.log("Inner function is executed");
+
+      //     console.log(value);
+      //   }
+      //   return inner;
+      // }
+      // let func = outer();
+      // console.log(func());
+
+      function counter() {
+        console.log("Outer Function Executed");
+        var count = 0;
+
+        function innerCount() {
+          console.log("Inner Function Executed");
+          count = count + 1;
+          console.log(count);
+        }
+        return innerCount;
+      }
+      let check = counter();
+      console.log(check());
+    </script>
+  </body>
+</html>
