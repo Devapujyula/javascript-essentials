@@ -1,0 +1,1 @@
+ A closure gives a function access to its outer scope. In JavaScript, closures are created every time a function is created, at function creation time.
