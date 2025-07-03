@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <h1><u>Promise</u></h1>
+    <script>
+      // let promise = new Promise(function (success, error) {
+      //   let dataCame = true;
+      //   if (dataCame) {
+      //     success("Promise done!");
+      //   } else {
+      //     error("Promise not done");
+      //   }
+      // });
+      // console.log(promise);
+
+      // ekkada promise anedhi oka object ee object em chesthundhi antey oka callback function ni tesukuntundhi aa callback function ee kindha unna function aa function ni manam EXECUTOR FUNCTION ani anatam.
+      // Malli ee EXECUTOR FUNCTION 2 callbacks ni tesukuntundhi tesukuni adhi edhina avacchu general ga manam resolve and reject tesukuntam
+      let promise = new Promise(
+        // This is an executor function
+        function (resolve, reject) {
+          // resolve and reject are 2 callback functions
+          let number = 8;
+          if (number % 2 === 0) {
+            resolve("Even Number");
+          } else {
+            reject("Not Even Number");
+          }
+        }
+      );
+
+      console.log(promise);
+
+      // promise fulfill avuthe appudu then executor function ni automatic ga call chesthundhi
+      promise.then(function (data) {
+        console.log(data);
+      });
+
+      // promise reject avvinappudu catch executor function ni reject avvindhi ani chepthadhi
+      promise.catch(function (error) {
+        console.log(error);
+      });
+    </script>
+  </body>
+</html>
