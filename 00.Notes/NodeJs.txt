@@ -6,3 +6,5 @@
 
 💡 Why does this matter?
 Using ^ gives you flexibility while maintaining stability in your app. Meanwhile, using ~ ensures that your app won’t break due to minor version changes. Understanding this distinction helps in managing dependencies effectively.
+
+updated code
