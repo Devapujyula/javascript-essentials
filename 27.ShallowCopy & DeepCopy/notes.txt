@@ -1,0 +1,29 @@
+| Feature        | Shallow Copy                    | Deep Copy                      |
+| -------------- | ------------------------------- | ------------------------------ |
+| Top-level copy | ✅ Yes                           | ✅ Yes                          |
+| Nested copy    | ❌ Shared references             | ✅ Fully cloned                 |
+| Performance    | ⚡ Fast                          | 🐢 Slower (recursive)          |
+| Safe to mutate | ❌ No (mutates original inside)  | ✅ Yes (fully independent)      |
+| Examples       | Spread `...`, `Object.assign()` | `structuredClone`, `JSON` hack |
+
+
+✅ Real-Life Use Cases
+✅ In React state updates, deep copy is safer for nested objects.
+✅ In Redux, we avoid mutating state, so deep copies are critical.
+✅ In immutability patterns, always avoid shallow references when nesting.
+
+✅ Shallow Copy Methods
+| Method              | Shallow? |
+| ------------------- | -------- |
+| `Object.assign()`   | ✅        |
+| Spread `{ ...obj }` | ✅        |
+| Array `slice()`     | ✅        |
+| Array `concat()`    | ✅        |
+
+✅ Deep Copy Methods
+| Method                         | Deep?  | Notes                     |
+| ------------------------------ | -----  | ------------------------- |
+| `structuredClone()`            | ✅     | Best built-in method      |
+| `JSON.parse(JSON.stringify())` | ✅     | Doesn’t support functions |
+| Custom recursive clone         | ✅     | Common in interviews      |
+
