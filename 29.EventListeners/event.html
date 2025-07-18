@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events in JS</title>
+  </head>
+  <body>
+    <h3>Inline Event listeners</h3>
+    <button onclick="welcome()">Greet</button>
+
+    <h3>On event listeners</h3>
+    <button id="greetBtn">Greet</button>
+
+    <h3>Add Event Listeners</h3>
+    <p>we will directly add event listener on onclick events</p>
+    <button id="greetButton">Greet</button>
+    <script>
+      // Inline event ela evvali function direct ga call cheyyatame
+      function greet() {
+        console.log("Hi Prakash");
+      }
+      welcome = () => console.log("Welcome to Home Page");
+
+      // onevent listeners ela evvali id evvali direct ga ecchi
+      let greetBtnE1 = document.getElementById("greetBtn");
+      greetBtnE1.onclick = () => {
+        console.log("Hi Prakash");
+      };
+
+      // addEventListener edhi modern way or approach to add event listners
+      let greetButton = document.getElementById("greetButton");
+      greetButton.addEventListener("click", function () {
+        console.log("Hello Prakash");
+      });
+    </script>
+  </body>
+</html>
