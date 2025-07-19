@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Closure</title>
+  </head>
+  <body>
+    <h1><u>Closures</u></h1>
+    <p>
+      A closure is the combination of a function bundled together (enclosed)
+      with references to its surrounding state (the lexical environment). In
+      other words, a closure gives a function access to its outer scope. In
+      JavaScript, closures are created every time a function is created, at
+      function creation time.
+    </p>
+    <i
+      ><b>
+        accessing variables of a function even its execution completes or out of
+        its scope
+      </b></i
+    >
+    <script>
+      // function outer() {
+      //   var x = 20;
+
+      //   function inner() {
+      //     var y = 100;
+      //     console.log(x);
+      //   }
+      //   return inner;
+      // }
+      // var res = outer();
+      // console.log(res);
+      // res();
+
+      function outer(num1) {
+        function inner(num2) {
+          console.log(num1 + num2);
+        }
+        return inner;
+      }
+      var result = outer(1);
+      result(8);
+      console.log(result);
+    </script>
+  </body>
+</html>
