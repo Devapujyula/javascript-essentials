@@ -5,7 +5,7 @@
  * use values from original array when making new one
  */
 
-const people = [
+var people = [
   {
     name: "Prakash",
     age: 27,
@@ -23,19 +23,19 @@ const people = [
   },
 ];
 
-const ages = people.map(function (person) {
+var ages = people.map(function (person) {
   // console.log(person);
   return person.age;
 });
 
-const newPeopleArray = people.map(function (person) {
+var newPeopleArray = people.map(function (person) {
   return {
     firstName: person.name,
     Age: person.age,
   };
 });
 
-const renderNewArray = people.map((person) => {
+var renderNewArray = people.map((person) => {
   return `
   <h2>${person.name}</h2> 
   <h3>${person.age}</h3>
@@ -49,3 +49,11 @@ console.log(renderNewArray);
 console.log(newPeopleArray);
 
 console.log(ages);
+
+var birthYear = [2000, 2002, 1998, 1999, 2020];
+
+var ages = birthYear.map((ele, index, array) => {
+  let age = 2025 - ele;
+
+  return age;
+});
