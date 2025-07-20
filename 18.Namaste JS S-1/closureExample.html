@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Closure Example</title>
+    <script>
+      function registrationCounter() {
+        let count = 0; // This variable is preserved inside the closure
+        return function () {
+          count++;
+          console.log(`Total users registered: ${count}`);
+        };
+      }
+
+      const registerUser = registrationCounter(); // Closure created here
+
+      function onRegisterClick() {
+        registerUser(); // Each click remembers the previous count
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Register</h2>
+    <input type="text" placeholder="Enter name" />
+    <button onclick="onRegisterClick()">Register</button>
+  </body>
+</html>
