@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Higher Order Function</title>
+  </head>
+  <body>
+    <h1><u>Higher Order Function</u></h1>
+    <p>
+      Higher Order Function is a function that receives another function as
+      argument or return another function or both
+    </p>
+    <script>
+      function first(fun) {
+        fun();
+      }
+
+      function second() {
+        console.log("Second Function");
+      }
+
+      first(second);
+    </script>
+  </body>
+</html>
