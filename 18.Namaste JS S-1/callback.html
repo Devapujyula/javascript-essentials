@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CallBack functions</title>
+  </head>
+  <body>
+    <h1><u>CallBack function</u></h1>
+    <p>
+      Call back funcion is a function passed as an argument to another function
+    </p>
+    <script>
+      // Example - 1
+      function test(a) {
+        console.log(a);
+        a();
+      }
+
+      test(function () {
+        console.log("callback function");
+      });
+
+      // Example - 2
+      function first(test) {
+        test();
+        console.log(test);
+        console.log("First Function");
+      }
+
+      function second() {
+        console.log("Second Function");
+      }
+
+      first(second);
+
+      // Example - 3
+      function add(a, b) {
+        console.log(a + b);
+      }
+
+      function product(a, b) {
+        console.log(a * b);
+      }
+
+      function calculator(val1, val2, operation) {
+        operation(val1, val2);
+      }
+
+      calculator(4, 5, add);
+      calculator(4, 8, product);
+
+      // Example - 4 map function
+      let array = [1, 4, 7, 2, 8, 9];
+      array.map((ele) => {
+        return console.log(ele * 2);
+      });
+    </script>
+  </body>
+</html>
