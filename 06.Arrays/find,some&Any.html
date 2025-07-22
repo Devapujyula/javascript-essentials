@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find,Some&Every</title>
+  </head>
+  <body>
+    <h1><u>Find,Some and Any</u></h1>
+    <p>These 3 are callback functions in JS</p>
+    <h5>
+      Find- It returns the first element of array for which callback function
+      returns true
+    </h5>
+    <h4>If you want to know in Telugu clearly?</h4>
+    <button onclick="explantionHandler()">Find Method Explanation</button>
+    <h5 id="findExplanation"></h5>
+    <script>
+      let places = ["Hyderabad", "Vizag", "Chennai", "Kolkata"];
+      var place = places.find(function (element, index, array) {
+        return element.startsWith("K");
+      });
+      console.log(place);
+
+      // some ane method only true or false ni mathrame return chesthundhi anthe kaani value ni return cheyyadhu
+      var place = places.some(function (element, index, array) {
+        return element.startsWith("K");
+      });
+      console.log(place);
+
+      // every ane method each and every possible value ni store chesthundhi ala okka value ki lekapooina inka true ni return cheyyadhu
+      var place = places.every(function (element, index, array) {
+        return element.startsWith("K");
+      });
+      console.log(place);
+
+      marks = [67, 89, 76, 56];
+      var pass = marks.every((mark) => {
+        return mark > 35;
+      });
+      console.log(pass);
+
+      function explantionHandler() {
+        document.getElementById("findExplanation").innerHTML =
+          "<h5>find ane method array lo em chesthundhi antey, array lo unna each and every element ni teesukuni manam edhi avuthe find cheyyamani esthamo dhanni chusukuni dhanni batti vethiki ecchesthundhi oka veela adhi index 0 daggare dorikithe inka array antha search cheyyatam aapesthundhi so ela aapeyyatam oka - ee find method lo and it returns only boolean i.e., true or false </h5>";
+      }
+    </script>
+  </body>
+</html>
