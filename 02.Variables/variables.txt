@@ -20,14 +20,35 @@ x = 20; // Shadowing means re-declaring the x only in var keyword
 }
 
 // let 
-// It is used to define block scope variable
-// Block scope is accesibale only in that block
-// let allows declaration, assignment, initialization
-// let can not allow shadowing and hoisting
+- It is used to define block scope variable
+- Block scope is accesibale only in that block
+- let allows declaration, assignment, initialization
+- let can not allow shadowing and hoisting
 
 // const
-// It doesnot allow declaration, assignment
-// It will allow only initialization
-// It is not about changing it is about initialization
-// It will not allow shadowing and hoisting
+- It doesnot allow declaration, assignment
+- It will allow only initialization
+- It is not about changing it is about initialization
+- It will not allow shadowing and hoisting
+- No declaring
+- No assigning
+- No shadowing
+- No Hoisting
 
+-- const is required to initialize memory
+-- At the time of loading application or component memory is initialized with some default value.
+-- If initialization is missing then by default value will be "undefined".
+-- we change const value Dynamically yes
+
+// Shadowing
+- It is the process of re-declaring same name identifier within the scope.
+
+// Hoisting
+- It is a compiling technique, where compiler can find declaration of variable before using it. Hence you can use a variable before declaring.
+
+function f1() {
+    x=10;
+    document.write("X ="+x)
+    var x ; // hoisting
+}
+f1()
