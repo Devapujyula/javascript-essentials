@@ -9,7 +9,7 @@
 // original value
 
 // when assigning non-primitive data types value to a variable is
-// done by reference so any changes will affect all the refernces
+// done by reference so any changes will affect all the references
 
 let number1 = 10;
 let number2 = number1;
