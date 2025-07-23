@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pure-Impure Functions</title>
+  </head>
+  <body>
+    <h1 style="color: red"><u>Pure and Impure Functions</u></h1>
+    <div>
+      <strong style="color: blue">Pure Function :</strong>
+      A pure function is a function that:
+      <ol>
+        <li>Always returns the same output for the same input.</li>
+        <li>
+          Does not cause side effects (like modifying global variables, DOM,
+          files, DB, etc.).
+        </li>
+      </ol>
+      <b>
+        A pure function is predictable and doesn't depend on or modify any
+        outside state. It's easier to test and debug.</b
+      >
+    </div>
+
+    <div>
+      <strong style="color: blue">Impure Function :</strong>
+      An impure function is a function that:
+      <ol>
+        <li>May return different outputs for the same input.</li>
+        <li>
+          Has side effects – like modifying a variable outside its scope, or
+          interacting with the outside world (console, network, DOM, etc.).
+        </li>
+      </ol>
+      <b
+        >An impure function depends on or changes external state. This makes the
+        output unpredictable, and harder to test or reuse.</b
+      >
+    </div>
+
+    <script>
+      //Pure function example
+      function pure(a, b) {
+        return a * b;
+      }
+      console.log(pure(6, 7));
+
+      // Impure function example
+      let total = 10;
+      function addTotal(value) {
+        total = total + value;
+        return total;
+      }
+      console.log(addTotal(10));
+      console.log(addTotal(10));
+    </script>
+  </body>
+</html>
