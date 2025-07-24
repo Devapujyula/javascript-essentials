@@ -38,7 +38,7 @@ x = 20; // Shadowing means re-declaring the x only in var keyword
 -- const is required to initialize memory
 -- At the time of loading application or component memory is initialized with some default value.
 -- If initialization is missing then by default value will be "undefined".
--- we change const value Dynamically yes
+-- we change const value Dynamically yes 
 
 // Shadowing
 - It is the process of re-declaring same name identifier within the scope.
