@@ -1,0 +1,116 @@
+1. Built-in Constructor Functions
+These are the built-in constructor functions provided by JavaScript.
+
+function Array()
+function Function()
+function Promise()
+function Object()
+function String()
+function Number(), etc.
+2. Built-in Array Constructor Function
+2.1 Default Properties and Methods
+Properties:
+
+constructor
+length
+prototype, etc.
+Methods:
+
+push()
+pop()
+splice()
+shift(), etc.
+2.2 Creating an Array with the new Operator (Older way of writing)
+Syntax: let myArray = new Array(item1, item2, ...);
+
+let myArray = new Array("a", 2, true);
+myArray.push("pen");
+
+console.log(myArray);  // Array (4)["a", 2, true, "pen"]
+console.log(myArray.length);  // 4
+
+3. Prototype Property
+The Prototype property will be shared across all the instances of their constructor function.
+
+3.1 Accessing the Prototype of a Constructor Function
+console.log(Array.prototype);
+
+3.2 Accessing the shared Prototype of an Instance
+let myArray = new Array("a", 2, true);
+console.log(Object.getPrototypeOf(myArray));
+
+3.3 Prototypal Inheritance
+On calling the new() operator, all the properties and methods defined on the prototype will become accessible to the instance objects. This process is called Prototypal Inheritance.
+
+4. Built-in Function Constructor Function
+4.1 Default Properties and Methods
+Properties:
+
+name
+length
+constructor
+prototype, etc.
+Methods:
+
+apply()
+bind()
+call()
+toString(), etc.
+4.2 Creating a Function with the new Operator (Older way of writing)
+Syntax: let myFunction = new Function("param1, param2, ...", function body);
+let Car = new Function("color, brand",
+  `this.color = color;
+   this.brand = brand;
+   this.start = function() {
+     console.log("started");
+  };`);
+
+console.log(Function.prototype);
+
+5. Instance Specific and Prototype Properties
+5.1 Prototype Properties/ Methods
+The Prototype Properties/ Methods are the properties or methods common across the instance objects.
+
+Examples:
+
+calculateAge
+displayGreetings
+displayProfileDetails
+calculateIncome
+5.1.1 Adding a Method to the prototype
+
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+}
+
+Person.prototype.displayFullName = function() {
+  return this.firstName + " " + this.lastName;
+};
+
+let person1 = new Person("Virat", "Kohli");
+let person2 = new Person("Sachin", "Tendulkar");
+
+console.log(Object.getPrototypeOf(person1) === Object.getPrototypeOf(person2));
+
+5.2 Instance Specific Properties/ Methods
+The Instance Specific Properties/ Methods are the properties or methods specific to the instance object.
+
+Examples:
+
+gender
+yearOfBirth
+friendsList
+name
+
+function Person(firstName, lastName) {
+  this.firstName = firstName;
+  this.lastName = lastName;
+}
+
+Person.prototype.displayFullName = function() {
+  return this.firstName + " " + this.lastName;
+};
+
+let person1 = new Person("Virat", "Kohli");
+console.log(Object.getOwnPropertyNames(person1));
