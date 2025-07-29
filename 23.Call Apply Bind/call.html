@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call Methos</title>
+  </head>
+  <body>
+    <h1><u>call method</u></h1>
+    <p>
+      In Java script data type of function is object and we already know that
+      objects have method of their own so function too have their own methods
+      like <strong>call(), apply(), bind()</strong>.
+    </p>
+    <h2><u>call:</u></h2>
+    <h3>
+      Built-in function in JavaScript that allows you to invoke a function with
+      a specific this value and pass arguments individually. It is commonly used
+      to borrow methods from other objects or explicitly set the context of
+      this.
+    </h3>
+    <script>
+      const hertz = {
+        company: "Hertz",
+        locationCode: "HZ",
+        reservation: [],
+        rentCar(carType, customerName) {
+          console.log(
+            `${customerName} rented a ${carType} from ${this.company}`
+          );
+        },
+      };
+
+      const avis = {
+        company: "Avis",
+        locationCode: "AV",
+        reservation: [],
+      };
+
+      const rent = hertz.rentCar;
+      rent("SUV", "Alice Johnson"); // this does not work as this in this context is undefined because this is simple function and not a method attached to any object or not been called upon any object.
+
+      // Using call() to set 'this' explicitly
+      rent.call(avis, "SUV", "Alice Johnson");
+      console.log(avis);
+
+      rent.call(hertz, "Sedan", "Bob Williams");
+      console.log(hertz);
+    </script>
+  </body>
+</html>
