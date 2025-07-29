@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply methos</title>
+  </head>
+  <body>
+    <h1><u>apply method</u></h1>
+    <h3>
+      Similar to the call method; apply method is used to invoke functions with
+      a specified this context. The primary difference is in how they handle
+      function arguments:
+    </h3>
+    <ul>
+      <li>
+        <strong><u>call Method:</u></strong> Accepts arguments individually
+        after the this value.
+      </li>
+      <li>
+        <strong><u>apply Method:</u></strong> Accepts arguments as an array or
+        array-like object.
+      </li>
+    </ul>
+    <script>
+      const hertz = {
+        company: "Hertz",
+        locationCode: "HZ",
+        reservations: [],
+        rentCar(carType, customerName) {
+          console.log(
+            `${customerName} rented a ${carType} from ${this.company}.`
+          );
+          this.reservations.push({ carType, customerName });
+        },
+      };
+      const avis = {
+        company: "Avis",
+        locationCode: "AV",
+        reservations: [],
+      };
+      const rent = hertz.rentCar;
+      rent("SUV", "Alice Johnson"); // this does not work as this in this context is undefined because this is simple function and not a method attached to any object or not been called upon any object.
+      // Using apply() to set 'this' explicitly
+
+      rent.apply(avis, ["SUV", "Alice Johnson"]); //  Alice Johnson rented a SUV from Avis.
+      console.log(avis); // {  company: 'Avis', locationCode: 'AV',  reservations: [ { carType: 'SUV', customerName: 'Alice Johnson' } ]}
+
+      rent.apply(hertz, ["Sedan", "Bob Williams"]); //  Bob Williams rented a Sedan from Hertz.
+      console.log(hertz); // {  company: 'Hertz',   locationCode: 'HZ',   reservations: [ { carType: 'Sedan', customerName: 'Bob Williams' } ] }
+
+      //       This example demonstrates how the apply method can be used to invoke a function with a specific this value and arguments provided as an array. While the apply method is useful, it's worth noting that in modern JavaScript, the spread operator (...) offers a more concise and readable alternative for passing arguments. However, understanding apply is beneficial for working with legacy code or specific use cases.
+    </script>
+  </body>
+</html>
