@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bind method</title>
+  </head>
+  <body>
+    <h1><u>Bind Method</u></h1>
+    <h3>
+      just like the call method, bind also allows us to manually set this
+      keywords for any function call. The bind method creates a new function
+      that, when invoked, has it’s this keyword set to the provided value.
+      Unlike call or apply, bind does not immediately execute the function but
+      returns a new function with the specified this context where this keyword
+      is bound. We can also set default parameters in advance when using bind,
+      which essentially involves pre-defining certain arguments beforehand. This
+      approach follows a common pattern called partial application, where some
+      of the original function's arguments are pre-applied.
+    </h3>
+    <script>
+      const hertz = {
+        company: "Hertz",
+        locationCode: "HZ",
+        reservations: [],
+        rentCar(carType, customerName) {
+          console.log(
+            `${customerName} rented a ${carType} from ${this.company}.`
+          );
+          this.reservations.push({ carType, customerName });
+        },
+      };
+      const avis = {
+        company: "Avis",
+        locationCode: "AV",
+        reservations: [],
+      };
+      const rent = hertz.rentCar;
+      rent("SUV", "Alice Johnson"); // this does not work as this in this context is undefined because this is simple function and not a method attached to any object or not been called upon any object.
+
+      // Using the spread operator to set 'this' explicitly
+      rent.call(avis, ...["SUV", "Alice Johnson"]);
+      console.log(avis);
+      const rentForAvis = hertz.rentCar.bind(avis);
+      const rentForHertz = hertz.rentCar.bind(hertz);
+    </script>
+  </body>
+</html>
