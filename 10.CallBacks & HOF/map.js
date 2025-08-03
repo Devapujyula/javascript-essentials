@@ -1,6 +1,6 @@
 /**
  * map
- * does retrn new Array
+ * does return new Array
  * does not change the size of original array
  * use values from original array when making new one
  */
