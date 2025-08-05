@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body>
+    <h1><u>Promise</u></h1>
+    <button onclick="clickHandler()">ClickMe for Explanation....!</button>
+    <h3 id="promiseExplanation"></h3>
+  </body>
+  <script>
+    // let promise = new Promise(function (resolve, reject) {
+    //   let dataCame = true;
+    //   if (dataCame) {
+    //     resolve("Promise Fulfilled");
+    //   } else {
+    //     reject("Promise not done");
+    //   }
+    // });
+    // console.log(promise);
+
+    // function clickHandler() {
+    //   document.getElementById("promiseExplanation").innerHTML =
+    //     "<i> Promise is an object, <br> Promise Object takes a callback Function <br> This object returns some data either success data or error information <br> State of Promises are : <br>1. Pending <br> 2. Fulfilled <br> 3. Rejected</i>";
+    // }
+  </script>
+  <script>
+    let promise = new Promise(function (resolve, reject) {
+      let taskDone = true;
+      if (taskDone) {
+        resolve("task completed");
+      } else {
+        reject("task failed");
+      }
+    });
+    promise.then(function (result) {
+      console.log(result);
+    });
+  </script>
+</html>
