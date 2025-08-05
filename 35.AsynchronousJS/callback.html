@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>callback</title>
+  </head>
+  <body>
+    <h2><u>callback</u></h2>
+    <script>
+      // callback function is a function that is passing as an argument to another function
+      // function test(a) {
+      //   console.log(a());
+      // }
+      // test(function () {
+      //   console.log("call back function");
+      // });
+
+      // function first(test) {
+      //   test();
+
+      //   console.log("This is 1st function");
+      // }
+
+      // function second() {
+      //   console.log("This is 2nd function");
+      // }
+
+      // first(second);
+    </script>
+    <script>
+      // actuall ga ekkada em jarughtundhi antey neny 3 functions rasanu ala raasi 3rd function ki first rasinia 2 functions arguments ga pass chesthunnam anamata.
+      // Why enduku ala cheyyatam cheppu?
+      // callbacks antey adhe kada oka function raasi aa function ki argument ga unko function ni pass cheyytanne manam callbacks ani antam.
+      function add(a, b) {
+        console.log(a + b);
+      }
+
+      function product(a, b) {
+        console.log(a * b);
+      }
+
+      function calculate(val1, val2, operation) {
+        operation(val1, val2);
+      }
+
+      calculate(3, 5, add);
+      calculate(2, 6, product);
+
+      array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      console.log(array);
+
+      let result = array.map((eachItem, index, array) => {
+        return eachItem * eachItem;
+      });
+      console.log(result);
+    </script>
+  </body>
+</html>
