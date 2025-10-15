@@ -1,0 +1,149 @@
+-Properties
+How object look like
+-Methods/Functions
+What things can Object do says the methods
+-Events
+Object performs something when we trigger the event 
+Events are mandatory to do things and without events we cannot do anything
+
+1.JS can refer elements HTML elements by using DOM hierarchy
+
+Example:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Demo</title>
+    <script>
+      function imageLoad() {
+        window.document.images[0].src =
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD6ROMNqDDoOD13amIkMvO5nP5OB68X7i-SXJ2JBLKTHE_-AHdbKEABvu26ge1TfnaJlXnhA&s";
+        window.document.forms[0].elements[1].value = "Register";
+        window.document.forms[1].elements[1].value = "Login";
+      }
+    </script>
+  </head>
+  <body onload="imageLoad()">
+    <img height="100px" width="100px" border="1px solid balck" />
+    <form>
+      <h2>Register</h2>
+      UserName : <input type="text" /> <input type="button" />
+    </form>
+    <form>
+      <h2>Login</h2>
+      Email : <input type="text" /> <input type="button" />
+    </form>
+  </body>
+</html>
+
+What is the problem with the DOm Hierarchy?
+- If you change the position of element everytime you have to update the position in code.
+- It is faster in rendering.
+- It is risky for JS but very easily understandable by JS
+
+2. JS can refer elements by using "name"
+Example:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Demo</title>
+    <script>
+      function bodyLoad() {
+        pic.src =
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScFXhkE63Z6912mvfiIO7ZsUMj1v-JJKYsguZEds9FH4srBBL-njyD75CqkiL0HJ0cT2Sk&s";
+        frmRegister.btnRegister.value = "Register";
+        frmLogin.btnEmail.value = "Login";
+      }
+    </script>
+  </head>
+  <h1><u>Accessing JS using HTML</u></h1>
+  <body onload="bodyLoad()">
+    <img height="100px" width="100px" name="pic" border="1px solid balck" />
+    <form name="frmRegister">
+      <h2>Register</h2>
+      UserName : <input type="text" name="txtName" />
+      <input type="button" name="btnRegister" />
+    </form>
+    <form name="frmLogin">
+      <h2>Login</h2>
+      Email : <input type="text" name="txtEmail" />
+      <input type="button" name="btnEmail" />
+    </form>
+  </body>
+</html>
+
+Disadvantages:
+- You can access any element directly by using its refernce name.
+- You cannot access child elements directly
+- You have to refer both parent and child hierarchy
+
+3. Js can refer by using "ID"
+Example:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Demo</title>
+    <script>
+      function bodyLoad() {
+        document.getElementById("pic").src =
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv-CHfDZuJeMJMO93jDASW7xE3D5WLL5QoZlmZK8yPM44sfCafsRB32Idz8GXxDeV-6h4U&s";
+        document.getElementById("btnRegister").value = "Register";
+        document.getElementById("btnEmail").value = "Login";
+      }
+    </script>
+  </head>
+  <h1><u>Accessing JS using HTML</u></h1>
+  <body onload="bodyLoad()">
+    <img height="100px" width="100px" id="pic" border="1px solid balck" />
+    <form name="frmRegister">
+      <h2>Register</h2>
+      UserName : <input type="text" name="txtName" />
+      <input type="button" id="btnRegister" />
+    </form>
+    <form name="frmLogin">
+      <h2>Login</h2>
+      Email : <input type="text" name="txtEmail" />
+      <input type="button" id="btnEmail" />
+    </form>
+  </body>
+</html>
+
+-Every element can be configured with only one ID.
+-Id have conflict with CSS reference
+-Id is not required if you are accessing any direct document element
+
+4. JS can refer any element using CSS selector
+document.querySelector()
+example:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Demo</title>
+    <script>
+      function bodyLoad() {
+        document.querySelector("img").src =
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD6ROMNqDDoOD13amIkMvO5nP5OB68X7i-SXJ2JBLKTHE_-AHdbKEABvu26ge1TfnaJlXnhA&s";
+      }
+    </script>
+  </head>
+  <h1><u>Accessing JS using HTML</u></h1>
+  <body onload="bodyLoad()">
+    <img height="100" width="100" name="pic" border="1px solid balck" />
+    <form name="frmRegister">
+      <h2>Register</h2>
+      UserName : <input type="text" name="txtName" />
+      <input type="button" name="btnRegister" />
+    </form>
+    <form name="frmLogin">
+      <h2>Login</h2>
+      Email : <input type="text" name="txtEmail" />
+      <input type="button" name="btnEmail" />
+    </form>
+  </body>
+</html>
+
+- QuerySelector can apply effects only to first element
+- it can handle data for multiple elements
+- it can also handle styles for multiple elements
+
+5. JS can refer all elements having common name 
+6. JS can refer all elements having common class name

@@ -1,0 +1,7 @@
+alert()
+confirm()
+console.log(), warn(), success(), error(), debug(), info() etc
+innerText()
+innerHTML()
+outerHTML()
+document.write()

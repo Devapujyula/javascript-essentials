@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Output Techniques</title>
+  </head>
+  <script>
+    function DeleteClick() {
+      if (confirm("Are you sure want to delete?") == true) {
+        document.querySelector("h1").innerText = "Record Deleted";
+      } else {
+        document.write("You cancelled...!");
+      }
+    }
+  </script>
+  <body>
+    <h1><u>Output Techniques</u></h1>
+    <h2>Click Delete Button to remove record</h2>
+    <button onclick="DeleteClick()">Delete</button>
+    <h1 align="center"></h1>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Demo</title>
+    <script>
+      function bodyLoad() {
+        document.querySelector("img").src =
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD6ROMNqDDoOD13amIkMvO5nP5OB68X7i-SXJ2JBLKTHE_-AHdbKEABvu26ge1TfnaJlXnhA&s";
+      }
+    </script>
+  </head>
+  <h1><u>Accessing JS using HTML</u></h1>
+  <body onload="bodyLoad()">
+    <img height="100" width="100" name="pic" border="1px solid balck" />
+    <form name="frmRegister">
+      <h2>Register</h2>
+      UserName : <input type="text" name="txtName" />
+      <input type="button" name="btnRegister" />
+    </form>
+    <form name="frmLogin">
+      <h2>Login</h2>
+      Email : <input type="text" name="txtEmail" />
+      <input type="button" name="btnEmail" />
+    </form>
+  </body>
+</html>
