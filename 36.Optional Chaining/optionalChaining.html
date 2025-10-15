@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optional Chaining</title>
+  </head>
+  <body>
+    <h1><u>Optional Chaining</u></h1>
+    <p id="one">This is a paragraph</p>
+    <script>
+      // Optional chaining (?.) allows you to safely access deeply nested properties without having to check if each level exists.
+      // If a property doesn’t exist, it returns undefined instead of throwing an error.
+      let employee = {
+        id: 145,
+        email: "prakash@gmail.com",
+        personalInfo: {
+          name: "Prakash",
+          mobile: 8500957777,
+          address: {
+            line1: "Near Jv Colony Park",
+            line2: "Gachibowli",
+            pincode: 500032,
+            city: "Hyderabad",
+            state: "Telangana",
+          },
+        },
+      };
+
+      console.log(employee.personalInfo?.address?.pincode);
+      console.log("Function Executed Successfully...!");
+
+      p = document.getElementById("two")?.innerText;
+      console.log(p);
+
+      console.log("Hello");
+    </script>
+  </body>
+</html>
