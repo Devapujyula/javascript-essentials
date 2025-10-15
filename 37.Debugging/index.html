@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Debugging</title>
+  </head>
+  <body>
+    <h1><u>Debugging In JS Dev Tools</u></h1>
+    <script>
+      console.log("Debug JavaScript");
+
+      function add(num1, num2) {
+        let sum = console.log("sum of ", num1, num2, "is :", num1 + num2);
+      }
+
+      function sub(num1, num2) {
+        let diff = console.log(
+          "Difference of ",
+          num1,
+          num2,
+          "is :",
+          num1 - num2
+        );
+      }
+
+      function product(num1, num2) {
+        let product = console.log(
+          "Product of ",
+          num1,
+          num2,
+          "is :",
+          num1 * num2
+        );
+      }
+
+      add(8, 7);
+      sub(9, 6);
+      product(8, 5);
+    </script>
+  </body>
+</html>
